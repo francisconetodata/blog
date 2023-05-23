@@ -16,18 +16,17 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR.parent / 'data' / 'web'
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'CHANGE_ME')
+SECRET_KEY = os.getenv('SECRET_KEY', 'change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.getenv("DEBUG", 0)))
+DEBUG = bool(int(os.getenv('DEBUG', 0)))
 
 ALLOWED_HOSTS = [
-    h.strip() for h in os.getenv("ALLOWED_HOSTS", "").split(",")
+    h.strip() for h in os.getenv('ALLOWED_HOSTS', '').split(',')
     if h.strip()
 ]
 
