@@ -1,3 +1,4 @@
 # Exemplo de blog em django (python)
 
-## Em construção
+## Em construção (under construction)!
+
