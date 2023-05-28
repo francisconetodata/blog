@@ -4,6 +4,7 @@
 gunicorn-error-log
 __localcode
 /data/
+__blanck_arquive.py
 
 # Django #
 *.log
