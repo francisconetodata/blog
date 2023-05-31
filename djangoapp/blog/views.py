@@ -7,6 +7,7 @@ from django.db.models.query import QuerySet
 from django.http import Http404
 from django.shortcuts import redirect
 from django.views.generic import DetailView, ListView
+from django.shortcuts import render
 
 PER_PAGE = 9
 
@@ -174,3 +175,23 @@ class PostDetailView(DetailView):
 
     def get_queryset(self) -> QuerySet[Any]:
         return super().get_queryset().filter(is_published=True)
+
+
+def SobreView(request):
+    # Page title
+    page_title = 'Sobre - '
+    # Context
+    context = {
+        'page_title': page_title,
+    }
+    return render(request, 'blog/pages/sobre.html', context)
+
+
+def ContatoView(request):
+    # Page title
+    page_title = 'Contato - '
+    # Context
+    context = {
+        'page_title': page_title,
+    }
+    return render(request, 'blog/pages/contato.html', context)

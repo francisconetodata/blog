@@ -1,6 +1,6 @@
 from blog.views import (CategoryListView, CreatedByListView, PageDetailView,
                         PostDetailView, PostListView, SearchListView,
-                        TagListView)
+                        TagListView, SobreView, ContatoView)
 from django.urls import path
 
 app_name = 'blog'
@@ -17,4 +17,8 @@ urlpatterns = [
     path('category/<slug:slug>/', CategoryListView.as_view(), name='category'),
     path('tag/<slug:slug>/', TagListView.as_view(), name='tag'),
     path('search/', SearchListView.as_view(), name='search'),
+    # Pagina 'sobre-min'
+    path('sobre', SobreView, name='sobre'),
+    # Pagina 'contato'
+    path('contato/', ContatoView, name='contato'),
 ]
